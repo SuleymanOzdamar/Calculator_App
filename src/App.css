@@ -1,38 +1,96 @@
-.App {
+.header {
   text-align: center;
+  font-size: 30px;
+  padding: 20px;
+  color: darkblue;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.App{
+  height: 100vh;
+  background-color: cadetblue;
+}
+
+button {
+  color: black;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: 0.5s;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 2px 15px 0 rgba(13, 13, 13, 0.9);
+}
+
+button:hover {
+  background-color: rgb(29, 5, 59);
+  color: wheat;
+}
+
+button:focus {
+  color: #706fd3;
+  border: 2px solid rgba(112, 111, 211, 1);
+  box-shadow: anim-shadow 0.3s forwards;
+}
+
+@keyframes anim-shadow {
+  100% {
+    box-shadow: 0 0 50px 20px rgb(112, 111, 211, 0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.calculator {
+  color: white;
+  width: 350px;
+  height: 600px;
+  margin: 25px auto;
+  background-color: rgb(48, 12, 105);
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.red {
+  color: red;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.blue {
+  color: blue;
 }
+
+.out-put {
+    text-align: right;
+    margin: 60px 30px 0;
+    font-size: 2.5rem;
+}
+
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  background: rgb(7, 36, 165);
+  gap: 15px;
+  padding: 20px;
+}
+
+.keyboard-row {
+  display: flex;
+  gap: 15px;
+}
+
+.one-block {
+  width: 25%;
+  aspect-ratio: 1/1;
+}
+.two-block {
+  width: calc(50% + 15px);
+  aspect-ratio: 2/1;
+}
+
